@@ -8,40 +8,57 @@
 </head>
 <body>
     <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Data Structure
+        <div class="page-header">
+        <h1>Data Structure</h1>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Data Structure
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Enter your Array separated by comma</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="inputArr" />                        
+                </div>
+                <div class="col-lg-3">
+                   <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sorting Algorithm
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#"  onclick="SelectionSort()">Selection Sort</a></li>
+                            <li><a href="#" onclick="BubbleSort()" >Bubble Sort</a></li>
+                            <li><a href="#" onclick="InsertionSort()" >Insertion Sort</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-lg-4 col-lg-offset-2">
-                        <label>Enter your Array separated by comma</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" class="form-control" id="inputArr" />                        
-                    </div>
+           <!--  <div class="row" style="margin-top:10px;">
+                <div class="col-lg-2 col-lg-offset-2">
+                    <button onclick="SelectionSort()" class="btn btn-default">Selection Sort</button>
+                </div>
+                <div class="col-lg-2">
+                    <button onclick="BubbleSort()" class="btn btn-default">Bubble Sort</button>
+                </div>
+                <div class="col-lg-2">
+                    <button onclick="InsertionSort()" class="btn btn-default">Insertion Sort</button>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <pre class="pre-view"></pre>
 
                 </div>
-                <div class="row">
-                    <div class="col-lg-2 col-lg-offset-2">
-                        <button onclick="SelectionSort()" class="btn btn-default">Selection Sort</button>
-                    </div>
-                    <div class="col-lg-2 col-lg-offset-2">
-                        <button onclick="BubbleSort()" class="btn btn-default">Bubble Sort</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <code></code>
-
-                    </div>
-                    </div>
             </div>
         </div>
-
     </div>
-    <script src="assets/js/libs/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/libs/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+
+</div>
+<script src="assets/js/libs/jquery-1.12.4.min.js"></script>
+<script src="assets/js/libs/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
