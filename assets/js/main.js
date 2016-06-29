@@ -131,3 +131,51 @@ function MergeSort() {
     
 }
 
+function QuickSort(){
+
+    var partition=function(array,nLow,nHigh){
+        
+        var pivot=parseInt(array[nLow]), i=nLow,j=nHigh,temp;
+
+        while(true)
+        {
+            while(array[i] < pivot && parseInt(array[i]) !=pivot)
+            {
+                i++;
+            }
+            while(array[j] > pivot && parseInt(array[j])!=pivot)
+            {
+                j--;
+            }
+
+            if(i<j)
+            {
+                temp=array[i];
+                array[i]=array[j];
+                array[j]=temp;
+
+            }
+            else
+            {
+                return j;
+            }
+            document.getElementsByTagName('pre')[0].innerText += array + '\n';
+        }
+    }
+
+    var sort=function(array,nLow,nHigh){
+        if(nLow<nHigh)
+        {
+            var pi=partition(array,nLow,nHigh)
+            sort(array,nLow,pi);
+            sort(array,pi+1,nHigh);
+        }
+
+    }
+
+    var arr = document.getElementById('inputArr').value.split(',');
+    document.getElementsByTagName('pre')[0].innerText = '';
+    sort(arr,0,arr.length-1);
+   
+}
+
