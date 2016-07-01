@@ -34,7 +34,7 @@ function BubbleSort() {
 
         for (var j = 0; j < arr.length; j++) {
 
-            if (parseInt(arr[j]) > parseInt( arr[j + 1]))
+            if (parseInt(arr[j]) > parseInt(arr[j + 1]))
             {
                 var temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -139,11 +139,11 @@ function QuickSort(){
 
         while(true)
         {
-            while(array[i] < pivot && parseInt(array[i]) !=pivot)
+            while(parseInt(array[i]) < pivot && parseInt(array[i]) !=pivot)
             {
                 i++;
             }
-            while(array[j] > pivot && parseInt(array[j])!=pivot)
+            while(parseInt(array[j]) > pivot && parseInt(array[j])!=pivot)
             {
                 j--;
             }
@@ -164,7 +164,8 @@ function QuickSort(){
     }
 
     var sort=function(array,nLow,nHigh){
-        if(nLow<nHigh)
+        
+        if(nLow <= nHigh)
         {
             var pi=partition(array,nLow,nHigh)
             sort(array,nLow,pi);
